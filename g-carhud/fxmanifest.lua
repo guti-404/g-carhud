@@ -7,7 +7,7 @@ description "Carhud for fivem"
 
 
 contributors {
-    "Jaareet#0097", -- Lua & CSS / HTML Helper
+    "Jaareet#0097", -- Tocar los huevos
     "Barikeloo#9927" -- JS Helper
 }
 
