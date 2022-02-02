@@ -7,8 +7,8 @@ description "Carhud for fivem"
 
 
 contributors {
-    "Jaareet#0097", -- Tocar los huevos
-    "Barikeloo#9927" -- JS Helper
+    "Jaareet#0097",
+    "Barikeloo#9927"
 }
 
 client_scripts {
