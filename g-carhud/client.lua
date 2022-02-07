@@ -34,7 +34,12 @@ CarHud = {
                 local inMotorcycle = false
                 local sleep = 1000
                 local km = (CarHud.getSpeed()* 3.6)
-                local fuelLevel = GetVehicleFuelLevel(CarHud.getVehicle());
+                local fuelLevel = 0
+                if IsPedInAnyVehicle(CarHud.playerPed()) then
+                    fuelLevel = GetVehicleFuelLevel(CarHud.getVehicle());
+                else
+                    fuelLevel = 0
+                end
                 if CarHud.isInVehicle() then 
                     cinturon = false
                     sleep = 100
@@ -60,7 +65,7 @@ CarHud = {
                     end
                     CarHud.sendNUI({
                         action = "speedometer";
-                        fuel   = GetVehicleFuelLevel(CarHud.getVehicle());
+                        fuel   = fuelLevel;
                         damage = GetVehicleEngineHealth(CarHud.getVehicle());
                         engine    = GetVehicleCurrentGear(CarHud.getVehicle());
                         speed  = km;
